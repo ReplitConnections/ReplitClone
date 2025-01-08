@@ -1,0 +1,11 @@
+:root {
+    --backColor: #121b2b;
+    --foreColor: #fff;
+}
+
+html {
+    background: var(--backColor);
+    color: var(--foreColor);
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
