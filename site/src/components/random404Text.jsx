@@ -4,7 +4,10 @@ const sayings = [
   "It's not here.",
   "That page doesn't exist.",
   "Sorry, but it's somewhere else.",
-  "Not found."
+  "Not found.",
+  "This website is under construction...",
+  "Hmm... I thought something was here yesterday!", 
+  "There was definatly something here yesterday."
 ]
 
 export default function RandomText() {
