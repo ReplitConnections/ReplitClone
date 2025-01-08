@@ -9,7 +9,7 @@ We'll need 2 seperate server structures for this. One to host the website, and o
 The website hoster can easily go offline and online quickly without much disruption to have quick updates, and all instances host the same content.
 It will be built with vanilla React. Maybe webpack, but I haven't used it before. We will make our own little UI library with vanilla CSS, maybe PostCSS if we're feeling lucky.
 
-For now I propose the backend of the site to be with Node, Express, and MongoDB. (unless anyone has a better database option).
+For now I propose the backend of the site to be with Astro, Node, and MongoDB. (unless anyone has a better database option).
 User file storage will probably be R2, but we need to consider a lot of variables for that.
 
 ### Container server nodes
