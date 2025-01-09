@@ -15,6 +15,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Change to the /site directory
+      - name: Change to site directory
+        working-directory: ./site
+
       # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -24,27 +28,32 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
+        working-directory: ./site
         run: npm install
 
       # Build the site
       - name: Build Astro site
+        working-directory: ./site
         run: npm run build
 
       # Start the Astro server
       - name: Start Astro server
+        working-directory: ./site
         run: npm run preview &
         env:
           PORT: 3000
 
       # Wait for the server to be ready
       - name: Wait for server
-        run: |
-          npx wait-on http://localhost:3000
+        working-directory: ./site
+        run: npx wait-on http://localhost:3000
 
       # Run tests
       - name: Run tests
+        working-directory: ./site
         run: npm run test
 
       # Optional: Lint code (if you have linting scripts)
       - name: Run linting
+        working-directory: ./site
         run: npm run lint
