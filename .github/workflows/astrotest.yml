@@ -31,16 +31,3 @@ jobs:
       - name: Build Astro site
         working-directory: ./site
         run: npm run build
-
-      # Start the Astro server
-      - name: Start Astro server
-        working-directory: ./site
-        run: npm run dev &
-        env:
-          PORT: 3000
-
-      # Wait for the server to be ready
-      - name: Wait for server
-        working-directory: ./site
-        run: |
-          npx wait-on http://localhost:3000
