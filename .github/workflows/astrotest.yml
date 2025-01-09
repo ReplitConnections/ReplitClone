@@ -1,0 +1,50 @@
+name: Test Astro Site
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21
+          cache: 'npm'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Build the site
+      - name: Build Astro site
+        run: npm run build
+
+      # Start the Astro server
+      - name: Start Astro server
+        run: npm run preview &
+        env:
+          PORT: 3000
+
+      # Wait for the server to be ready
+      - name: Wait for server
+        run: |
+          npx wait-on http://localhost:3000
+
+      # Run tests
+      - name: Run tests
+        run: npm run test
+
+      # Optional: Lint code (if you have linting scripts)
+      - name: Run linting
+        run: npm run lint
