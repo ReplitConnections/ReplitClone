@@ -1,15 +1,16 @@
 ---
 import VanillaLayout from "../layouts/vanilla.astro"
 import SignInButton from "../components/signInButton"
-import '../assets/css/signIn.css'
 
-export const prerender = false;
+import '../assets/css/global.css'
+import '../assets/css/auth.css'
 ---
 
 <VanillaLayout>
 	<div class="SignInPage">
 		<div class="SignInContainer">
 			<h1>Login</h1>
+
 			<SignInButton 
 				signInWebsite="Google" 
 				service="google" 

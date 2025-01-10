@@ -6,9 +6,19 @@
     --foreColor: #d4d6d8ff;
     --foreColorMed: #e9ebeeff;
     --foreColorLight: #ffffffff;
-    --backColorLight: #233a5f;
-    --backColorMed: #12263c;
-    --backColor: #121b2bff;
+
+    --container3Background: #616161;
+    --container3Accent: #727272;
+
+    --container2Background: #363636;
+    --container2Accent: #414141;
+
+    --container1Background: #292929;
+    --container1Accent: #2b2b2b;
+
+    --backColorLight: #292929;
+    --backColorMed: #1d1d1d;
+    --backColor: #080808;
 }
 
 html, body {
@@ -17,6 +27,84 @@ html, body {
     margin: 0;
     background: var(--backColorMed); 
     color: var(--foreColorMed);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans Variable", Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2.7em;
+}
+h3{
+    font-size: 2.3em;
+}
+h4{
+    font-size: 2em;
+}
+h5{
+    font-size: 1.7em;
+}
+h6{
+    font-size: 1.5em;
+}
+p{
+    font-size: 1.2em;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.container{
+    margin: 6px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container1 {
+    padding: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    border-radius: 3px;
+    background: var(--container1Background);
+    display: inline-block;
+
+    outline: 2px solid var(--container1Accent);
+    outline-offset: -4px;
+}
+
+.container2 {
+    padding: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    border-radius: 6px;
+    background: var(--container2Background);
+    display: inline-block;
+
+    outline: 3px solid var(--container2Accent);
+    outline-offset: -6px;
+}
+
+.container3 {
+    padding: 18px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    border-radius: 12px;
+    background: var(--container3Background);
+
+    outline: 4px solid var(--container3Accent);
+    outline-offset: -7px;
+}
+
+.ctatainer{
+    padding: 999px;
 }
