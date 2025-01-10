@@ -10,8 +10,8 @@
     "format": "prettier -w . --cache",
     "preview": "astro preview",
     "start": "astro dev",
-    "db:push": "drizzle-kit push:sqlite",
-    "db:generate": "drizzle-kit generate:sqlite"
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "@astrojs/node": "^9.0.0",
