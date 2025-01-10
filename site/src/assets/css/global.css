@@ -1,11 +1,12 @@
 :root {
-    --backColor: #121b2b;
-    --foreColor: #fff;
-}
-
-html {
-    background: var(--backColor);
-    color: var(--foreColor);
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
+    --accentLight: #D149FF;
+    --accent: #a827d2ff;
+    --primaryLight: #17d992ff;
+    --primary: #15c283ff;
+    --foreColor: #d4d6d8ff;
+    --foreColorMed: #e9ebeeff;
+    --foreColorLight: #ffffffff;
+    --backColorLight: #233a5f;
+    --backColorMed: #12263c;
+    --backColor: #121b2bff;
 }

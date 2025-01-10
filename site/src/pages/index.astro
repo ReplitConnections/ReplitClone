@@ -1,17 +1,25 @@
 ---
 import VanillaLayout from "../layouts/vanilla.astro"
-import CounterButton from "../components/counterButton"
-import ServerInfo from "../components/serverInfo.astro"
-import '../assets/css/global.css'
+import SignInButton from "../components/signInButton"
+import '../assets/css/signIn.css'
 
 export const prerender = false;
-const cookies = Astro.cookies.get("abc")?.value
 ---
 
 <VanillaLayout>
-	<h1>Hello!</h1>
-	<p>Just trying this out. If you set a cookie with the key of "abc" and value of, whatever, it should come up here: {cookies}</p>
-	<CounterButton client:load/>
-	<p>Here's a server-side "island" displaying Node.js' argv</p>
-	<ServerInfo server:defer/>
+	<div class="SignInPage">
+		<div class="SignInContainer">
+			<h1>Login</h1>
+			<SignInButton 
+				signInWebsite="Google" 
+				service="google" 
+				callbackURL="https://github.com/ReplitConnections/ReplitClone" 
+			/>
+			<SignInButton 
+				signInWebsite="GitHub" 
+				service="github" 
+				callbackURL="https://github.com/ReplitConnections/ReplitClone" 
+			/>
+		</div>
+	</div>
 </VanillaLayout>
