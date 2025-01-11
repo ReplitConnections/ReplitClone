@@ -13,7 +13,7 @@ const DEBUG = false;
     docker = new Docker();
   } catch {
     logger.error(
-      "Docker is not installed properly, or the node is not being run as root!"
+      "Docker is not installed properly, or the node is not being run as root!",
     );
     process.exit(1);
   }
@@ -33,12 +33,16 @@ const DEBUG = false;
   userStream.write(`exec su - you\n`);
 
   userStream.on("data", (d) => {
-    if(d.toString().includes("you@") && d.toString().includes(`:~$`) && !userCanInteract){
-      userCanInteract = true
-      logger.info(`You can now interact with the shell!`)
+    if (
+      d.toString().includes("you@") &&
+      d.toString().includes(`:~$`) &&
+      !userCanInteract
+    ) {
+      userCanInteract = true;
+      logger.info(`You can now interact with the shell!`);
     }
 
-    if(userCanInteract) process.stdout.write(d);
+    if (userCanInteract) process.stdout.write(d);
   });
 
   process.stdin.setRawMode(true);

@@ -13,7 +13,7 @@ const DEBUG = true;
     docker = new Docker();
   } catch {
     logger.error(
-      "Docker is not installed properly, or the node is not being run as root!"
+      "Docker is not installed properly, or the node is not being run as root!",
     );
     process.exit(1);
   }
@@ -65,7 +65,7 @@ const DEBUG = true;
       `su -c "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash" you`,
 
       // Continues below...
-    ].join(" && ") + "\n"
+    ].join(" && ") + "\n",
   );
 
   secretStream.on("error", (e) => {
@@ -87,8 +87,8 @@ const DEBUG = true;
 
             // Finish up
             `dir /`,
-            `exit`
-          ].join(" && ") + "\n"
+            `exit`,
+          ].join(" && ") + "\n",
         );
       }, 500);
       return;
@@ -104,7 +104,7 @@ const DEBUG = true;
       doneSetup = true;
 
       logger.info(
-        `Setup has completed. Root password is ${rootPwd}. Creating the image...`
+        `Setup has completed. Root password is ${rootPwd}. Creating the image...`,
       );
 
       container.container.commit(
@@ -112,7 +112,7 @@ const DEBUG = true;
           comment: "base image",
           repo: "replimg",
         },
-        console.log
+        console.log,
       );
     } else if (DEBUG) console.log(d.toString());
   });

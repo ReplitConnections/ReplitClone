@@ -1,6 +1,7 @@
 # WIP
 
 ## How to install
+
 - Install docker
 - Run `docker pull ubuntu`
 - Run `npm i`

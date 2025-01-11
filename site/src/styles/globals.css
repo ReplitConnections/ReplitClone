@@ -6,6 +6,7 @@
 
   :root  {
     --background: 181 100% 100%;
+    --background-grid: 181 0% 97%;
     --foreground: 181 5% 10%;
     --card: 181 50% 100%;
     --card-foreground: 181 5% 15%;
@@ -28,6 +29,7 @@
   }
   .dark  {
     --background: 181 50% 10%;
+    --background-grid: 181 52.5% 12.5%;
     --foreground: 181 5% 100%;
     --card: 181 50% 10%;
     --card-foreground: 181 5% 100%;

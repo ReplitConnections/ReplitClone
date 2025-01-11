@@ -19,6 +19,7 @@ const config = {
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
+        background_grid: 'hsl(var(--background-grid))',
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
@@ -56,6 +57,13 @@ const config = {
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
+      },
+      backgroundImage: {
+        'grid': `linear-gradient(0deg, transparent 24%, hsl(var(--background-grid)) 25%, hsl(var(--background-grid)) 26%, transparent 27%, transparent 74%, hsl(var(--background-grid)) 75%, hsl(var(--background-grid)) 76%, transparent 77%, transparent),
+                        linear-gradient(90deg, transparent 24%, hsl(var(--background-grid)) 25%, hsl(var(--background-grid)) 26%, transparent 27%, transparent 74%, hsl(var(--background-grid)) 75%, hsl(var(--background-grid)) 76%, transparent 77%, transparent)`,
+      },
+      backgroundSize: {
+        'grid': '3em 3em',
       },
       keyframes: {
         'accordion-down': {

@@ -1,13 +1,17 @@
 # ReplitClone
+
 This is an empty repo for anyone to add to and contribute to the replit clone.
 
 ## How we can program
+
 Ironically, Replit is our best bet for programming this. I have created a team that is limited to 10 people. If we need more, we can figure something out. Please see the issue "I think I have a solution" for details. I have hooked the repo up to replit and made a test commit, and it works!
 
 ## Proposed structure (coding398)
+
 We'll need 2 seperate server structures for this. One to host the website, and one to host the containers.
 
 ### Website
+
 The website hoster can easily go offline and online quickly without much disruption to have quick updates, and all instances host the same content.
 It will be built with vanilla React. Maybe webpack, but I haven't used it before. We will make our own little UI library with vanilla CSS, maybe PostCSS if we're feeling lucky.
 
@@ -15,6 +19,7 @@ For now I propose the backend of the site to be with Astro, Node, and MongoDB. (
 User file storage will probably be R2, but we need to consider a lot of variables for that.
 
 ### Container server nodes
+
 The container servers connect to hosters and get information about which nodes run which user-code containers. They run arbitrary code in Docker, set up a MONITORED network connection, and pass requests through NGINX to the correct container.
 
 In a perfect world, this would mean that each user container can use all available ports, just with a HOST header. Realistically though, it should only be permitted for port 80, 443, and everything above 2000. Other things like SSH and UDP should be disallowed.
