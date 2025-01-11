@@ -4,9 +4,6 @@
 
 @layer base {
 
-/* I don't like these colors quite */
-
-
   :root  {
     --background: 181 100% 100%;
     --foreground: 181 5% 10%;
