@@ -1,0 +1,18 @@
+modules = ["nodejs-20", "web"]
+run = "cd site && pnpm dev"
+
+[nix]
+channel = "stable-24_05"
+
+[[ports]]
+localPort = 4321
+externalPort = 80
+exposeLocalhost = true
+
+[[ports]]
+localPort = 4322
+externalPort = 3003
+exposeLocalhost = true
+
+[deployment]
+run = ["sh", "-c", "cd site && pnpm dev"]
