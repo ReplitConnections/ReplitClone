@@ -1,6 +1,8 @@
 # ReplitClone
 This is an empty repo for anyone to add to and contribute to the replit clone.
 
+## How we can program
+Ironically, Replit is our best bet for programming this. I have created a team that is limited to 10 people. If we need more, we can figure something out. Please see the issue "I think I have a solution" for details. I have hooked the repo up to replit and made a test commit, and it works!
 
 ## Proposed structure (coding398)
 We'll need 2 seperate server structures for this. One to host the website, and one to host the containers.
