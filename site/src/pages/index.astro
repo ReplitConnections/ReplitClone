@@ -7,36 +7,37 @@ import { buttonVariants } from '@/components/ui/button'
   title="Replit Clone"
   description="This website is an open-source alternative to Replit."
 >
-    <div class="min-h-screen w-full bg-grid bg-[length:grid]">
-      <section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-        <div class="flex max-w-[980px] flex-col items-start gap-2">
-          <h1
-            class="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl"
-          >
-            [Replit Clone]<br class="hidden sm:inline" />
-          </h1>
-          <p class="max-w-[700px] text-lg text-muted-foreground">
-            Share your code with the world, line by line. 
-          </p>
-        </div>
-        <div class="flex gap-4">
-          <a
-            href="/login"
-            target="_blank"
-            rel="noreferrer"
-            class={buttonVariants()}
-          >
-            Get Started
-          </a>
-          <a
-            href="https://github.com/ReplitConnections/ReplitClone"
-            target="_blank"
-            rel="noreferrer"
-            class={buttonVariants({ variant: 'outline' })}
-          >
-            GitHub
-          </a>
-        </div>
-      </section>
+    <div class="min-h-screen w-full bg-grid bg-[length:grid] header bg-fixed">
+     <section class="container grid items-center gap-6 pb-8 pt-6 md:py-10 text-center">
+  <div class="flex max-w-[980px] flex-col items-center gap-2 mx-auto">
+    <h1
+      class="text-3xl font-extrabold leading-tight tracking-tighter text-6xl shadow-2xl	"
+    >
+      [Parduant]<br class="hidden lg:inline" />
+    </h1>
+    <p class="max-w-[700px] lg:text-lg text-muted-foreground text-center">
+      Share your code with the world, line by line.
+    </p>
+  </div>
+  <div class="flex gap-4 justify-center ">
+    <a
+      href="/login"
+      target="_self"
+      rel="noreferrer"
+      class={buttonVariants()}
+    >
+      Get Started
+    </a>
+    <a
+      href="https://github.com/ReplitConnections/ReplitClone"
+      target="_blank"
+      rel="noreferrer"
+      class={buttonVariants({ variant: 'outline' })}
+    >
+      GitHub
+    </a>
+  </div>
+</section>
+
     </div>
 </BaseLayout>
